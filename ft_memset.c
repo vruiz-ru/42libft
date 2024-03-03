@@ -6,16 +6,17 @@
 /*   By: vruiz-ru <vruiz-ru@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/16 17:42:39 by vruiz-ru          #+#    #+#             */
-/*   Updated: 2024/01/16 18:12:21 by vruiz-ru         ###   ########.fr       */
+/*   Updated: 2024/03/01 04:59:25 by vruiz-ru         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <string.h>
-#include<stdio.h>
+#include <stdio.h>
+#include "libft.h"
 
 void	*ft_memset(void *b, int c, size_t len)
 {
-	unsigned char i;
+	unsigned char	i;
 
 	i = 0;
 	while (len > 0)
@@ -26,7 +27,7 @@ void	*ft_memset(void *b, int c, size_t len)
 	}
 	return (b);
 }
-
+/*
 int	main(void)
 {
 	char	v[10]; 
@@ -44,4 +45,4 @@ int	main(void)
 	for (int i = 0; i < 10; ++i)
 		printf("%d\n", v[i]);
 	printf("Real memset-> %p\n", memset(v, 21, 5));
-}
+}*/

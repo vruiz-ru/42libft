@@ -6,21 +6,22 @@
 /*   By: vruiz-ru <vruiz-ru@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/10 17:48:38 by vruiz-ru          #+#    #+#             */
-/*   Updated: 2024/01/10 17:51:35 by vruiz-ru         ###   ########.fr       */
+/*   Updated: 2024/03/01 05:42:38 by vruiz-ru         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <ctype.h>
 #include <stdio.h>
+#include "libft.h"
 
-char ft_tolower(int c)
+char	ft_tolower(int c)
 {
 	if (c >= 'A' && c <= 'Z')
 		return (c + 32);
 	else
 		return (c);
 }
-
+/*
 int main (int argc, char *argv[])
 {
 	(void)argc;
@@ -30,4 +31,4 @@ int main (int argc, char *argv[])
 	printf("ft      :%c\n", ft_tolower(*argv[0]));
 	printf("original:%c\n", tolower(*argv[0]));
 	return (0);
-}	
+}*/	

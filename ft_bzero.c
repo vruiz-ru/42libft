@@ -1,36 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vruiz-ru <vruiz-ru@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/28 20:24:16 by vruiz-ru          #+#    #+#             */
-/*   Updated: 2024/03/01 00:38:38 by vruiz-ru         ###   ########.fr       */
+/*   Created: 2024/01/17 01:02:25 by vruiz-ru          #+#    #+#             */
+/*   Updated: 2024/02/28 18:32:52 by vruiz-ru         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
+#include <strings.h>
 #include <stdio.h>
 
-size_t	ft_strlen(const char *s)
+void	ft_bzero(void *s, size_t n)
 {
-	int	i;
-
-	i = 0;
-	while (s[i] != '\0')
+	while (n > 0)
 	{
-		i++;
+		*(unsigned char *)s = '\0';
+		s++;
+		n--;
 	}
-	return ((size_t)(i));
 }
-/*
-int main (void)
+
+/*int	main(void)
 {
-	const char *str = "Holaquetalmellamojuan";
+	int	v[20];
 
-	printf("Longitud de la cadena: %zu\n", ft_strlen(str));
-	printf("Longitud de la cadena (original): %zu\n", strlen(str));
+	for (int i = 0; i < 20; ++i)
+		v[i] = 42;
 
-	return 0;
-}*/
+	for (int i = 0; i < 20; ++i)
+		printf("%d\n", v[i]);
+	puts("");
+
+	ft_bzero(v, 9);
+	
+	for (int i = 0; i < 20; ++i)
+		printf("%d\n", v[i]);
+}*/	

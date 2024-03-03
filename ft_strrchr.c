@@ -6,17 +6,18 @@
 /*   By: vruiz-ru <vruiz-ru@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/11 18:58:31 by vruiz-ru          #+#    #+#             */
-/*   Updated: 2024/01/11 19:22:44 by vruiz-ru         ###   ########.fr       */
+/*   Updated: 2024/03/01 05:17:28 by vruiz-ru         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <string.h>
 #include <stdio.h>
+#include "libft.h"
 
-char *ft_strrchr(const char *s, int c)
+char	*ft_strrchr(const char *s, int c)
 {
 	int	last;
-	int i;
+	int	i;
 
 	i = 0;
 	while (s[i] != '\0')
@@ -29,6 +30,7 @@ char *ft_strrchr(const char *s, int c)
 		return ((char *)(s + last));
 	return (NULL);
 }
+/*
 int main (int argc, char *argv[])
 {
 	(void)argc;
@@ -41,6 +43,4 @@ int main (int argc, char *argv[])
 	printf("ft      :%s\n", ft_strrchr(*argv, ch));	
 	printf("original:%s\n", strrchr(*argv, ch));
 	return (0);
-}
-
-
+}*/

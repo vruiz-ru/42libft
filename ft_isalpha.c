@@ -6,11 +6,12 @@
 /*   By: vruiz-ru <vruiz-ru@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/10 13:36:35 by vruiz-ru          #+#    #+#             */
-/*   Updated: 2024/01/10 15:12:36 by vruiz-ru         ###   ########.fr       */
+/*   Updated: 2024/03/01 03:31:35 by vruiz-ru         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include <stdio.h>
 #include <ctype.h>
+#include "libft.h"
 
 int	ft_isalpha(int c)
 {
@@ -19,10 +20,10 @@ int	ft_isalpha(int c)
 	else
 		return (0);
 }
-
+/*
 int	main(void)
-{	
-	char a;
+{
+	char	a;
 
 	a = 'U';
 	printf("%c\n", a);
@@ -30,4 +31,4 @@ int	main(void)
 //	printf("%d\n", isalpha(a));
     printf("%c\n", a);
 	return (0);
-}
+}*/

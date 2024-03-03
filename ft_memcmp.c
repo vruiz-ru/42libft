@@ -6,13 +6,14 @@
 /*   By: vruiz-ru <vruiz-ru@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/16 18:13:42 by vruiz-ru          #+#    #+#             */
-/*   Updated: 2024/01/16 18:45:06 by vruiz-ru         ###   ########.fr       */
+/*   Updated: 2024/03/01 03:42:24 by vruiz-ru         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <string.h>
 #include <stdlib.h>
 #include <stdio.h>
+#include "libft.h"
 
 int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
@@ -20,15 +21,15 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 		return (0);
 	while (n > 0)
 	{
-	if (*(unsigned char *)s1 != *(unsigned char *)s2)
-		return (*(unsigned char *)s1 - *(unsigned char *)s2);
-	n--;
-	s1++;
-	s2++;
+		if (*(unsigned char *)s1 != *(unsigned char *)s2)
+			return (*(unsigned char *)s1 - *(unsigned char *)s2);
+		n--;
+		s1++;
+		s2++;
 	}
 	return (0);
 }
-
+/*
 int	main(int argc, char **argv)
 {
 	char	*s = argv[1];
@@ -47,4 +48,4 @@ int	main(int argc, char **argv)
 		printf("The strings are different\n");
 
 	
-}
+}*/
