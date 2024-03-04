@@ -6,13 +6,14 @@
 #    By: vruiz-ru <vruiz-ru@student.42madrid.com>   +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/02/18 18:15:41 by vruiz-ru          #+#    #+#              #
-#    Updated: 2024/03/01 05:44:30 by vruiz-ru         ###   ########.fr        #
+#    Updated: 2024/03/04 20:33:07 by vruiz-ru         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME	=   libft.a
 SRCS	=	ft_atoi.c \
 			ft_bzero.c \
+			ft_calloc.c \
 			ft_isdigit.c \
 			ft_strlen.c \
 			ft_strlcpy.c \
@@ -24,7 +25,14 @@ SRCS	=	ft_atoi.c \
 			ft_memcmp.c \
 			ft_memmove.c \
 			ft_memset.c \
+			ft_putchar_fd.c \
+			ft_putstr_fd.c \
 			ft_strchr.c \
+			ft_strdup.c \
+			ft_strjoin.c \
+			ft_strlcpy.c \
+			ft_strlen.c \
+			ft_strmapi.c \
 			ft_strrchr.c \
 			ft_tolower.c \
 			ft_toupper.c \

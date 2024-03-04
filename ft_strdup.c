@@ -6,7 +6,7 @@
 /*   By: vruiz-ru <vruiz-ru@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/02 17:59:28 by vruiz-ru          #+#    #+#             */
-/*   Updated: 2024/03/02 18:58:16 by vruiz-ru         ###   ########.fr       */
+/*   Updated: 2024/03/04 16:54:16 by vruiz-ru         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include <string.h>
@@ -14,17 +14,17 @@
 #include <stdlib.h>
 #include "libft.h"
 
-char * ft_strdup(const char *s1)
+char	*ft_strdup(const char *s1)
 {
-	char *dst;
+	char	*dst;
 
-	dst	= (char *)malloc((strlen(s1)) + 1);
+	dst = (char *)malloc((ft_strlen(s1)) + 1);
 	if (dst == NULL)
 		return (NULL);
-	ft_strcpy (dst, s1);
+	ft_strlcpy(dst, s1, ft_strlen(s1) + 1);
 	return (dst);
 }
-
+/*
 int main()
 {
 	char *original = "Hola, mundo!";
@@ -43,7 +43,4 @@ int main()
 	free(copia);  // No olvides liberar la memoria!
 
 	return 0;
-}
-
-
-			
+}*/		

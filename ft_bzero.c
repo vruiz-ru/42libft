@@ -6,12 +6,13 @@
 /*   By: vruiz-ru <vruiz-ru@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/17 01:02:25 by vruiz-ru          #+#    #+#             */
-/*   Updated: 2024/02/28 18:32:52 by vruiz-ru         ###   ########.fr       */
+/*   Updated: 2024/03/04 15:10:00 by vruiz-ru         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <strings.h>
 #include <stdio.h>
+#include "libft.h"
 
 void	ft_bzero(void *s, size_t n)
 {

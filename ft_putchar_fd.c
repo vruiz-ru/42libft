@@ -1,35 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vruiz-ru <vruiz-ru@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/10 13:36:35 by vruiz-ru          #+#    #+#             */
-/*   Updated: 2024/03/04 15:13:21 by vruiz-ru         ###   ########.fr       */
+/*   Created: 2024/03/04 19:10:05 by vruiz-ru          #+#    #+#             */
+/*   Updated: 2024/03/04 20:32:29 by vruiz-ru         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <fcntl.h>
+#include <unistd.h>
 #include <stdio.h>
-#include <ctype.h>
 #include "libft.h"
 
-int	ft_isalpha(int c)
+void ft_putchar_fd(char c, int fd)
 {
-	if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'))
-		return (1);
-	else
-		return (0);
+	write (fd, &c, 1);
 }
 /*
-int	main(void)
+int main (void)
 {
-	char	a;
-
-	a = 'U';
-	printf("%c\n", a);
-//	printf("%d\n", ft_isalpha(a));
-//	printf("%d\n", isalpha(a));
-    printf("%c\n", a);
+	char 	c;
+	int	fd;
+	
+	c = 'H';
+	fd = open ( "prueba.txt", O_CREAT | O_RDWR | O_APPEND, 0644);
+	if (fd == -1)
+		printf("%s \n", " Error"); 
+	ft_putchar_fd(c, fd); 
 	return (0);
 }*/

@@ -1,35 +1,50 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vruiz-ru <vruiz-ru@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/10 13:36:35 by vruiz-ru          #+#    #+#             */
-/*   Updated: 2024/03/04 15:13:21 by vruiz-ru         ###   ########.fr       */
+/*   Created: 2024/03/04 17:02:50 by vruiz-ru          #+#    #+#             */
+/*   Updated: 2024/03/04 17:39:56 by vruiz-ru         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stdlib.h>
 #include <stdio.h>
-#include <ctype.h>
 #include "libft.h"
 
-int	ft_isalpha(int c)
+char *ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-	if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'))
-		return (1);
-	else
-		return (0);
+	char	*dst;
+	int	i;
+
+	i = 0;
+	dst = (char *)malloc(ft_strlen(s) + 1);
+	if (dst == NULL)
+		return (NULL);
+	while (s[i])
+	{
+		dst[i] = f(i, s[i]);
+		i++;
+	}
+	dst[i] = 0;
+	return (dst);
 }
 /*
-int	main(void)
+char mod(unsigned int index, char c)
 {
-	char	a;
+	return (c + index);
+}
 
-	a = 'U';
-	printf("%c\n", a);
-//	printf("%d\n", ft_isalpha(a));
-//	printf("%d\n", isalpha(a));
-    printf("%c\n", a);
-	return (0);
+int main (void)
+{
+
+	char	*str = "abcde";
+	char	*mapi;
+
+	mapi = ft_strmapi(str, mod);
+	printf("%s\n", mapi);
+	
+	return 0;
 }*/

@@ -6,7 +6,7 @@
 /*   By: vruiz-ru <vruiz-ru@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/02 19:13:16 by vruiz-ru          #+#    #+#             */
-/*   Updated: 2024/03/02 19:56:54 by vruiz-ru         ###   ########.fr       */
+/*   Updated: 2024/03/04 16:25:54 by vruiz-ru         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ char *ft_substr(char const *s, unsigned int start, size_t len)
 	char *s;
 	
 	if (start >= s_len)
-		return (ft_strup(""))
+		return (ft_strdup(""))
 	if 		
 
 
