@@ -6,7 +6,7 @@
 #    By: vruiz-ru <vruiz-ru@student.42madrid.com>   +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/02/18 18:15:41 by vruiz-ru          #+#    #+#              #
-#    Updated: 2024/03/04 20:33:07 by vruiz-ru         ###   ########.fr        #
+#    Updated: 2024/03/05 20:07:21 by vruiz-ru         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -26,6 +26,7 @@ SRCS	=	ft_atoi.c \
 			ft_memmove.c \
 			ft_memset.c \
 			ft_putchar_fd.c \
+			ft_putendl_fd.c \
 			ft_putstr_fd.c \
 			ft_strchr.c \
 			ft_strdup.c \
