@@ -6,7 +6,7 @@
 #    By: vruiz-ru <vruiz-ru@student.42madrid.com>   +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/02/18 18:15:41 by vruiz-ru          #+#    #+#              #
-#    Updated: 2024/03/05 20:07:21 by vruiz-ru         ###   ########.fr        #
+#    Updated: 2024/03/06 21:29:42 by vruiz-ru         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -21,6 +21,7 @@ SRCS	=	ft_atoi.c \
 			ft_isalpha.c \
 			ft_isascii.c \
 			ft_isprint.c \
+			ft_itoa.c \
 			ft_memchr.c \
 			ft_memcmp.c \
 			ft_memmove.c \
@@ -28,6 +29,7 @@ SRCS	=	ft_atoi.c \
 			ft_putchar_fd.c \
 			ft_putendl_fd.c \
 			ft_putstr_fd.c \
+			ft_putnbr_fd.c \
 			ft_strchr.c \
 			ft_strdup.c \
 			ft_strjoin.c \

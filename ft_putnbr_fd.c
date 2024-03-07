@@ -6,7 +6,7 @@
 /*   By: vruiz-ru <vruiz-ru@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/05 19:24:56 by vruiz-ru          #+#    #+#             */
-/*   Updated: 2024/03/05 20:28:15 by vruiz-ru         ###   ########.fr       */
+/*   Updated: 2024/03/06 21:16:34 by vruiz-ru         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ void ft_putnbr_fd(int n, int fd)
 	str = ft_itoa(n);
 	ft_putstr_fd(str, fd);
 }
-
+/*
 int main (void)
 {
 	int	num;
@@ -34,4 +34,4 @@ int main (void)
 		printf("%s \n", " Error");
 	ft_putnbr_fd(num, fd);
 	return (0);
-}
+}*/
