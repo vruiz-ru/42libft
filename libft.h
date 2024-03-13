@@ -6,7 +6,7 @@
 /*   By: vruiz-ru <vruiz-ru@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/28 18:13:55 by vruiz-ru          #+#    #+#             */
-/*   Updated: 2024/03/05 20:28:00 by vruiz-ru         ###   ########.fr       */
+/*   Updated: 2024/03/13 18:03:50 by vruiz-ru         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,12 @@
 # include <unistd.h>
 # include <stdlib.h>
 # include <string.h>
+
+typedef	struct	s_list
+{
+	void			*content;
+	struct	s_list	*next;
+}					t_list;
 
 void	ft_bzero(void *s, size_t n);
 
