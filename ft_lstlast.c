@@ -1,26 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstadd_front.c                                  :+:      :+:    :+:   */
+/*   ft_lstlast.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vruiz-ru <vruiz-ru@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/13 19:07:46 by vruiz-ru          #+#    #+#             */
-/*   Updated: 2024/03/14 19:07:34 by vruiz-ru         ###   ########.fr       */
+/*   Created: 2024/03/14 19:30:14 by vruiz-ru          #+#    #+#             */
+/*   Updated: 2024/03/14 19:46:16 by vruiz-ru         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
-#include <stdlib.h>
+#include <unistd.h>
 #include "libft.h"
 
-void    ft_lstadd_front(t_list **lst, t_list *new)
+t_list	*ft_lstlast(t_list *lst)
 {
-    if (lst && new)
-    {
-        new->next = *lst;
-        *lst = new;
-    }
+	while (lst->next != NULL)
+	{
+		lst = lst->next;
+	}
+	return (lst);
 }
 /*
 int main()
@@ -54,13 +54,12 @@ int main()
     
     ft_lstadd_front(nlist, nodo2);
     ft_lstadd_front(nlist, nodo3);
-    while (n != 0)
-    {
-      printf("%p\n",n->content);
-      printf("%d\n",*(int*)(n->content));
-      n = n->next; 
-    }
-   
+    
+    t_list *last;
+    last = ft_lstlast(nodo3);  
+    printf("%d\n", *(int*)(last->content));
+    free(nodo1);
+    free(nodo2);
+    free(nodo3);
     return 0;
 }*/
-
