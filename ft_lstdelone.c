@@ -1,40 +1,43 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstnew.c                                        :+:      :+:    :+:   */
+/*   ft_lstdelone.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vruiz-ru <vruiz-ru@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/13 18:04:32 by vruiz-ru          #+#    #+#             */
-/*   Updated: 2024/03/15 18:58:39 by vruiz-ru         ###   ########.fr       */
+/*   Created: 2024/03/15 15:09:23 by vruiz-ru          #+#    #+#             */
+/*   Updated: 2024/03/15 16:19:46 by vruiz-ru         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
-#include <stdlib.h>
+#include <unistd.h>
 #include "libft.h"
 
-t_list	*ft_lstnew(void *content)
+void	ft_lstdelone(t_list *lst, void (*del)(void *))
 {
-	t_list	*nodo;
-
-	nodo = malloc(sizeof(t_list));
-	if (nodo == NULL)
-		return (NULL);
-	nodo->content = content;
-	nodo->next = 0;
-	return (nodo);
+	if (lst && del)
+	{
+		(*del)(lst->content);
+		free(lst);
+	}
 }
 /*
+void del	(void *lst)
+{
+	free(lst);
+}
+
 int main()
 {
-	int	i;
-	int *p;
-	t_list	*lista;
+    int *p1;   
+    t_list *nodo1;
 
-	i = 12;
-	p = &i;
-	lista = ft_lstnew(p);
-	free(lista);
-	return 0;
+    p1 = malloc(sizeof(int));
+    *p1 = 48;
+
+    nodo1 = ft_lstnew(p1);
+    ft_lstdelone(nodo1 , del);
+ 
+    return 0;
 }*/

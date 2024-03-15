@@ -1,40 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstnew.c                                        :+:      :+:    :+:   */
+/*   ft_lstmap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vruiz-ru <vruiz-ru@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/13 18:04:32 by vruiz-ru          #+#    #+#             */
-/*   Updated: 2024/03/15 18:58:39 by vruiz-ru         ###   ########.fr       */
+/*   Created: 2024/03/15 18:43:49 by vruiz-ru          #+#    #+#             */
+/*   Updated: 2024/03/15 19:14:37 by vruiz-ru         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <stdlib.h>
 #include "libft.h"
 
-t_list	*ft_lstnew(void *content)
+t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
-	t_list	*nodo;
 
-	nodo = malloc(sizeof(t_list));
-	if (nodo == NULL)
-		return (NULL);
-	nodo->content = content;
-	nodo->next = 0;
-	return (nodo);
 }
-/*
-int main()
-{
-	int	i;
-	int *p;
-	t_list	*lista;
-
-	i = 12;
-	p = &i;
-	lista = ft_lstnew(p);
-	free(lista);
-	return 0;
-}*/
