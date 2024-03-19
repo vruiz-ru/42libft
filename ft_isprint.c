@@ -6,22 +6,23 @@
 /*   By: vruiz-ru <vruiz-ru@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/11 20:50:28 by vruiz-ru          #+#    #+#             */
-/*   Updated: 2024/03/01 03:21:08 by vruiz-ru         ###   ########.fr       */
+/*   Updated: 2024/03/19 17:30:59 by vruiz-ru         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <ctype.h>
 #include "libft.h"
 
 int	ft_isprint(int c)
 {
-	if (c >= 32 && c <= 127)
+	if (c >= 32 && c <= 126)
 		return (1);
 	else
 		return (0);
 }
 /*
+#include <stdio.h>
+#include <ctype.h>
+
 int	main(int argc, char **argv)
 {
 	(void)argc;

@@ -6,28 +6,42 @@
 /*   By: vruiz-ru <vruiz-ru@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/16 18:45:30 by vruiz-ru          #+#    #+#             */
-/*   Updated: 2024/03/01 04:54:41 by vruiz-ru         ###   ########.fr       */
+/*   Updated: 2024/03/19 19:13:37 by vruiz-ru         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
-#include <stdio.h>
 #include "libft.h"
 
 void	*ft_memmove(void *dst, const void *src, size_t len)
 {
-	if (len == 0)
-		return (0);
-	while (len > 1)
+	size_t	i;
+
+	i = 0;
+	if (dst == 0 && src == 0)
+		return (dst);
+	if ((char *)dst < (char *)src)
 	{
-		*(char *) dst = *(char *) src;
-		src++;
-		dst++;
-		len--;
+		while (len >= 1)
+		{
+			((char *)dst)[i] = ((char *)src)[i];
+			i++;
+			len--;
+		}
 	}
-	return ((char *)dst);
+	else
+	{
+		while (len >= 1)
+		{
+			((char *)dst)[len - 1] = ((char *) src)[len - 1];
+			len--;
+		}
+	}
+	return (dst);
 }
-/*
+/* 
+#include <string.h>
+#include <stdio.h>
+
 int main() {
     char str[] = "Hello, World!";
     char buffer1[20]; // Array para almacenar la copia de la función ft_memmove

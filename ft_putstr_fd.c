@@ -6,16 +6,13 @@
 /*   By: vruiz-ru <vruiz-ru@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/04 20:15:31 by vruiz-ru          #+#    #+#             */
-/*   Updated: 2024/03/04 20:34:38 by vruiz-ru         ###   ########.fr       */
+/*   Updated: 2024/03/19 17:13:07 by vruiz-ru         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <fcntl.h>
-#include <unistd.h>
-#include <stdio.h>
 #include "libft.h"
 
-void ft_putstr_fd(char *s, int fd)
+void	ft_putstr_fd(char *s, int fd)
 {
 	while (*s)
 	{
@@ -24,6 +21,9 @@ void ft_putstr_fd(char *s, int fd)
 	}
 }
 /*
+#include <fcntl.h>
+#include <unistd.h>
+#include <stdio.h>
 int main (void)
 {
 	char 	*s;

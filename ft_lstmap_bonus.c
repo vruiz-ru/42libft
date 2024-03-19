@@ -1,37 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
+/*   ft_lstmap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vruiz-ru <vruiz-ru@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/05 19:24:56 by vruiz-ru          #+#    #+#             */
-/*   Updated: 2024/03/19 17:11:43 by vruiz-ru         ###   ########.fr       */
+/*   Created: 2024/03/15 18:43:49 by vruiz-ru          #+#    #+#             */
+/*   Updated: 2024/03/19 16:55:25 by vruiz-ru         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putnbr_fd(int n, int fd)
+t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
-	char	*str;
-
-	str = ft_itoa(n);
-	ft_putstr_fd(str, fd);
-}
-/*
-#include <fcntl.h>
-#include <unistd.h>
-#include <stdio.h>
-int main (void)
-{
-	int	num;
-	int	fd;
-
-	num = 123456789;
-	fd = open ( "prueba.txt", O_CREAT | O_RDWR | O_APPEND, 0644);
-	if (fd == -1)
-		printf("%s \n", " Error");
-	ft_putnbr_fd(num, fd);
 	return (0);
-}*/
+}

@@ -1,37 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
+/*   ft_lstnew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vruiz-ru <vruiz-ru@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/05 19:24:56 by vruiz-ru          #+#    #+#             */
-/*   Updated: 2024/03/19 17:11:43 by vruiz-ru         ###   ########.fr       */
+/*   Created: 2024/03/13 18:04:32 by vruiz-ru          #+#    #+#             */
+/*   Updated: 2024/03/15 18:58:39 by vruiz-ru         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stdio.h>
+#include <stdlib.h>
 #include "libft.h"
 
-void	ft_putnbr_fd(int n, int fd)
+t_list	*ft_lstnew(void *content)
 {
-	char	*str;
+	t_list	*nodo;
 
-	str = ft_itoa(n);
-	ft_putstr_fd(str, fd);
+	nodo = malloc(sizeof(t_list));
+	if (nodo == NULL)
+		return (NULL);
+	nodo->content = content;
+	nodo->next = 0;
+	return (nodo);
 }
 /*
-#include <fcntl.h>
-#include <unistd.h>
-#include <stdio.h>
-int main (void)
+int main()
 {
-	int	num;
-	int	fd;
+	int	i;
+	int *p;
+	t_list	*lista;
 
-	num = 123456789;
-	fd = open ( "prueba.txt", O_CREAT | O_RDWR | O_APPEND, 0644);
-	if (fd == -1)
-		printf("%s \n", " Error");
-	ft_putnbr_fd(num, fd);
-	return (0);
+	i = 12;
+	p = &i;
+	lista = ft_lstnew(p);
+	free(lista);
+	return 0;
 }*/

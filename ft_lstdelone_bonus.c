@@ -1,37 +1,43 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
+/*   ft_lstdelone.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vruiz-ru <vruiz-ru@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/05 19:24:56 by vruiz-ru          #+#    #+#             */
-/*   Updated: 2024/03/19 17:11:43 by vruiz-ru         ###   ########.fr       */
+/*   Created: 2024/03/15 15:09:23 by vruiz-ru          #+#    #+#             */
+/*   Updated: 2024/03/15 16:19:46 by vruiz-ru         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stdio.h>
+#include <unistd.h>
 #include "libft.h"
 
-void	ft_putnbr_fd(int n, int fd)
+void	ft_lstdelone(t_list *lst, void (*del)(void *))
 {
-	char	*str;
-
-	str = ft_itoa(n);
-	ft_putstr_fd(str, fd);
+	if (lst && del)
+	{
+		(*del)(lst->content);
+		free(lst);
+	}
 }
 /*
-#include <fcntl.h>
-#include <unistd.h>
-#include <stdio.h>
-int main (void)
+void del	(void *lst)
 {
-	int	num;
-	int	fd;
+	free(lst);
+}
 
-	num = 123456789;
-	fd = open ( "prueba.txt", O_CREAT | O_RDWR | O_APPEND, 0644);
-	if (fd == -1)
-		printf("%s \n", " Error");
-	ft_putnbr_fd(num, fd);
-	return (0);
+int main()
+{
+    int *p1;   
+    t_list *nodo1;
+
+    p1 = malloc(sizeof(int));
+    *p1 = 48;
+
+    nodo1 = ft_lstnew(p1);
+    ft_lstdelone(nodo1 , del);
+ 
+    return 0;
 }*/

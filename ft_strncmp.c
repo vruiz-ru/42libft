@@ -1,50 +1,46 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strmapi.c                                       :+:      :+:    :+:   */
+/*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vruiz-ru <vruiz-ru@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/04 17:02:50 by vruiz-ru          #+#    #+#             */
-/*   Updated: 2024/03/19 17:20:00 by vruiz-ru         ###   ########.fr       */
+/*   Created: 2024/03/17 11:10:59 by vruiz-ru          #+#    #+#             */
+/*   Updated: 2024/03/19 17:20:45 by vruiz-ru         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
+int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
-	char	*dst;
-	int		i;
+	size_t	i;
 
 	i = 0;
-	dst = (char *)malloc(ft_strlen(s) + 1);
-	if (dst == NULL)
-		return (NULL);
-	while (s[i])
+	while (i < n)
 	{
-		dst[i] = f(i, s[i]);
+		if (s1[i] != s2[i])
+			return ((unsigned char)s1[i] - (unsigned char)s2[i]);
+		else if (s1[i] == 0)
+			return (0);
 		i++;
 	}
-	dst[i] = 0;
-	return (dst);
+	return (0);
 }
 /*
-#include <stdlib.h>
 #include <stdio.h>
-char mod(unsigned int index, char c)
-{
-	return (c + index);
-}
+#include <string.h>
 
-int main (void)
-{
+int main () {
+   char str1[15];
+   char str2[15];
+   int ret;
+   strcpy(str1, "abcdef");
+   strcpy(str2, "ABCDEF");
+   ret = strncmp(str1, str2, 4);
+   printf("%d\n", ret);
+   ret = ft_strncmp(str1, str2, 4);
+   printf("%d\n", ret);
 
-	char	*str = "abcde";
-	char	*mapi;
-
-	mapi = ft_strmapi(str, mod);
-	printf("%s\n", mapi);
-	
-	return 0;
+   return(0);
 }*/

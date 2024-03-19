@@ -6,18 +6,18 @@
 /*   By: vruiz-ru <vruiz-ru@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/02 19:13:16 by vruiz-ru          #+#    #+#             */
-/*   Updated: 2024/03/18 21:28:23 by vruiz-ru         ###   ########.fr       */
+/*   Updated: 2024/03/19 17:21:34 by vruiz-ru         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char *ft_substr(char const *s, unsigned int start, size_t len)
+char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	size_t	s_len;
-	char	*str;
+	size_t			s_len;
+	char			*str;
 	unsigned int	i;
-	
+
 	i = 0;
 	s_len = ft_strlen(s);
 	if (start >= s_len)

@@ -1,50 +1,46 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strmapi.c                                       :+:      :+:    :+:   */
+/*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vruiz-ru <vruiz-ru@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/04 17:02:50 by vruiz-ru          #+#    #+#             */
-/*   Updated: 2024/03/19 17:20:00 by vruiz-ru         ###   ########.fr       */
+/*   Created: 2024/03/19 14:10:10 by vruiz-ru          #+#    #+#             */
+/*   Updated: 2024/03/19 17:03:05 by vruiz-ru         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
-{
-	char	*dst;
+char	**ft_split(char const *s, char c)
+{	
 	int		i;
+	int		j;
+	char	**str;
 
 	i = 0;
-	dst = (char *)malloc(ft_strlen(s) + 1);
-	if (dst == NULL)
-		return (NULL);
-	while (s[i])
+	j = 0;
+	while (s[i] != '\0' )
 	{
-		dst[i] = f(i, s[i]);
+		if (s[i] == c)
+			j++;
 		i++;
 	}
-	dst[i] = 0;
-	return (dst);
+	str = (char **)malloc(sizeof(char *) * (j + 2));
+	str[j + 1] = (char *) '\0';
+	i = 0;
+	j = 0;
+	while (s[j] != '\0' )
+	{
+		while (s[j] != '\0' && s[j] != c)
+		{
+			j++;
+		}
+		str[i] = (char *)malloc(sizeof(char) * j + 1);
+		ft_strlcpy(str[i], s, j + 1);
+		s = s + j + 1;
+		i++;
+		j = 0;
+	}
+	return (str);
 }
-/*
-#include <stdlib.h>
-#include <stdio.h>
-char mod(unsigned int index, char c)
-{
-	return (c + index);
-}
-
-int main (void)
-{
-
-	char	*str = "abcde";
-	char	*mapi;
-
-	mapi = ft_strmapi(str, mod);
-	printf("%s\n", mapi);
-	
-	return 0;
-}*/

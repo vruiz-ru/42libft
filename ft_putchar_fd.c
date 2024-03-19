@@ -6,20 +6,21 @@
 /*   By: vruiz-ru <vruiz-ru@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/04 19:10:05 by vruiz-ru          #+#    #+#             */
-/*   Updated: 2024/03/04 20:32:29 by vruiz-ru         ###   ########.fr       */
+/*   Updated: 2024/03/19 16:59:42 by vruiz-ru         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <fcntl.h>
-#include <unistd.h>
-#include <stdio.h>
 #include "libft.h"
 
-void ft_putchar_fd(char c, int fd)
+void	ft_putchar_fd(char c, int fd)
 {
 	write (fd, &c, 1);
 }
 /*
+#include <fcntl.h>
+#include <unistd.h>
+#include <stdio.h>
+
 int main (void)
 {
 	char 	c;
