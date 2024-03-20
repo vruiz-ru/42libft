@@ -6,25 +6,27 @@
 /*   By: vruiz-ru <vruiz-ru@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/10 17:58:44 by vruiz-ru          #+#    #+#             */
-/*   Updated: 2024/03/01 05:10:34 by vruiz-ru         ###   ########.fr       */
+/*   Updated: 2024/03/20 17:55:39 by vruiz-ru         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
-#include <stdio.h>
 #include "libft.h"
 
 char	*ft_strchr(const char *s, int c)
 {
 	while (*s)
 	{
-		if (*s == c)
+		if (*s == (char)c)
 			return ((char *)s);
 		s++;
 	}
+	if ((char)c == 0)
+		return ((char *)s);
 	return (NULL);
 }
 /*
+#include <string.h>
+#include <stdio.h>
 int main (int argc, char *argv[])
 {
 	(void)argc;

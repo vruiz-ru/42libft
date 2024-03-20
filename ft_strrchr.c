@@ -6,31 +6,31 @@
 /*   By: vruiz-ru <vruiz-ru@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/11 18:58:31 by vruiz-ru          #+#    #+#             */
-/*   Updated: 2024/03/01 05:17:28 by vruiz-ru         ###   ########.fr       */
+/*   Updated: 2024/03/20 17:51:05 by vruiz-ru         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
-#include <stdio.h>
 #include "libft.h"
 
 char	*ft_strrchr(const char *s, int c)
 {
-	int	last;
-	int	i;
-
-	i = 0;
-	while (s[i] != '\0')
+	char *last;
+	
+	last = 0;
+	while (*s)
 	{
-		if (s[i] == c)
-			last = i;
-		i++;
+		if (*s == (char)c)
+			last = (char *)s;
+		s++;
 	}
-	if (last > 0)
-		return ((char *)(s + last));
-	return (NULL);
+	if ((char)c == 0)
+	   return ((char *)s);
+	return (last);	
 }
 /*
+#include <string.h>
+#include <stdio.h>
+
 int main (int argc, char *argv[])
 {
 	(void)argc;
