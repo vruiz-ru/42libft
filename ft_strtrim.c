@@ -6,13 +6,10 @@
 /*   By: vruiz-ru <vruiz-ru@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/06 21:34:32 by vruiz-ru          #+#    #+#             */
-/*   Updated: 2024/03/19 14:39:41 by vruiz-ru         ###   ########.fr       */
+/*   Updated: 2024/03/20 20:16:13 by vruiz-ru         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <string.h>
-#include <stdlib.h>
 #include "libft.h"
 
 int	ft_comp_i(char const *s1, char const *set)
@@ -41,7 +38,7 @@ int	ft_comp_f(char const *s1, char const *set)
 
 	f = (ft_strlen(s1)) - 1;
 	s = 0;
-	while ((set[s] != 0) && (s1[f] >= 0))
+	while ((set[s] != 0) && (f >= 0))
 	{
 		if (s1[f] == set[s])
 		{
@@ -64,6 +61,8 @@ char	*ft_strtrim(char const *s1, char const *set)
 	cont = 0;
 	i = ft_comp_i(s1, set);
 	f = ft_comp_f(s1, set);
+	if (f < i)
+		return (ft_strdup(""));
 	len_trim = f - i + 2;
 	str_trim = (char *)malloc(sizeof(char) * len_trim);
 	if (str_trim == NULL)
@@ -78,6 +77,9 @@ char	*ft_strtrim(char const *s1, char const *set)
 	return (str_trim);
 }
 /*
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
 int main  (void)
 {
   char  *str;

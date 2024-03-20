@@ -6,7 +6,7 @@
 /*   By: vruiz-ru <vruiz-ru@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/11 18:58:31 by vruiz-ru          #+#    #+#             */
-/*   Updated: 2024/03/20 17:51:05 by vruiz-ru         ###   ########.fr       */
+/*   Updated: 2024/03/20 19:26:39 by vruiz-ru         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 char	*ft_strrchr(const char *s, int c)
 {
-	char *last;
-	
+	char	*last;
+
 	last = 0;
 	while (*s)
 	{
@@ -24,8 +24,8 @@ char	*ft_strrchr(const char *s, int c)
 		s++;
 	}
 	if ((char)c == 0)
-	   return ((char *)s);
-	return (last);	
+		return ((char *)s);
+	return (last);
 }
 /*
 #include <string.h>
