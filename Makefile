@@ -6,7 +6,7 @@
 #    By: vruiz-ru <vruiz-ru@student.42madrid.com>   +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/02/18 18:15:41 by vruiz-ru          #+#    #+#              #
-#    Updated: 2024/03/19 14:19:55 by vruiz-ru         ###   ########.fr        #
+#    Updated: 2024/03/21 20:21:00 by vruiz-ru         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -48,9 +48,17 @@ SRCS	=	ft_atoi.c \
 			ft_tolower.c \
 			ft_toupper.c \
 
+SRCS_B	=	ft_lstadd_back_bonus.c \
+			ft_lstadd_front_bonus.c \
+			ft_lstclear_bonus.c \
+			ft_lstdelone_bonus.c \
+			ft_lstiter_bonus.c \
+			ft_lstlast_bonus.c \
+			ft_lstnew_bonus.c \
+			ft_lstsize_bonus.c\
 
 OBJS	= $(SRCS:.c=.o)
-#OBJS_B	= $(SRCS_B:.c=.o)
+OBJS_B	= $(SRCS_B:.c=.o)
 RM		= rm -f
 LIBC	= ar -rcs
 FLAGS	= -Wall -Wextra -Werror
@@ -64,15 +72,15 @@ $(NAME): ${OBJS}
 
 all: $(NAME)
 
-#bonus: $(NAME) $(OBJS_B)
-#	${LIBC} $(NAME) $(OBJS_B)
+bonus: $(NAME) $(OBJS_B)
+	${LIBC} $(NAME) $(OBJS_B)
 
 fclean: clean
-	$(RM) $(NAME) #$(bonus)
+	$(RM) $(NAME) $(bonus)
 
 clean:
-	$(RM) -f $(OBJS) #$(OBJS_B)
+	$(RM) -f $(OBJS) $(OBJS_B)
 
 re: fclean all
 
-.PHONY: all clean fclean re .c.o
+.PHONY: all clean fclean re .c.o bonus

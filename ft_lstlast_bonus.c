@@ -6,16 +6,16 @@
 /*   By: vruiz-ru <vruiz-ru@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/14 19:30:14 by vruiz-ru          #+#    #+#             */
-/*   Updated: 2024/03/14 19:46:16 by vruiz-ru         ###   ########.fr       */
+/*   Updated: 2024/03/21 22:33:00 by vruiz-ru         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <unistd.h>
 #include "libft.h"
 
 t_list	*ft_lstlast(t_list *lst)
 {
+	if (lst == NULL)
+		return (NULL);
 	while (lst->next != NULL)
 	{
 		lst = lst->next;
@@ -23,6 +23,10 @@ t_list	*ft_lstlast(t_list *lst)
 	return (lst);
 }
 /*
+#include <stdio.h>
+#include <unistd.h>
+#include <stdlib.h>
+
 int main()
 {
   
