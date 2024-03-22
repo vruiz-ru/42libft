@@ -6,7 +6,7 @@
 /*   By: vruiz-ru <vruiz-ru@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/15 17:53:03 by vruiz-ru          #+#    #+#             */
-/*   Updated: 2024/03/19 17:08:44 by vruiz-ru         ###   ########.fr       */
+/*   Updated: 2024/03/22 16:22:55 by vruiz-ru         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,15 +15,19 @@
 void	ft_lstclear(t_list **lst, void (*del)(void *))
 {
 	t_list	*temp;
+	t_list	*actual;
 
 	if (lst && del)
 	{
-		while ((*lst) != 0)
+		actual = *lst;
+		while (actual != 0)
 		{
-			temp = (*lst)->next;
-			del(*lst);
-			*lst = temp;
+			temp = actual;
+			actual = actual->next;
+			del(temp->content);
+			free(temp);
 		}
+		*lst = NULL;
 	}
 }
 /*

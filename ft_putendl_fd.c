@@ -6,7 +6,7 @@
 /*   By: vruiz-ru <vruiz-ru@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/05 14:44:37 by vruiz-ru          #+#    #+#             */
-/*   Updated: 2024/03/05 15:27:36 by vruiz-ru         ###   ########.fr       */
+/*   Updated: 2024/03/22 19:45:40 by vruiz-ru         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,12 +17,15 @@
 
 void	ft_putendl_fd(char *s, int fd)
 {
-	while (*s)
+	if (s)
 	{
-		ft_putchar_fd(*s, fd);
-		s++;
+		while (*s)
+		{
+			ft_putchar_fd(*s, fd);
+			s++;
+		}
+		write (fd, "\n", 1);
 	}
-	write (fd, "\n", 1);
 }
 /*
 int main (void)

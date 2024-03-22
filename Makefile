@@ -6,7 +6,7 @@
 #    By: vruiz-ru <vruiz-ru@student.42madrid.com>   +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/02/18 18:15:41 by vruiz-ru          #+#    #+#              #
-#    Updated: 2024/03/21 20:21:00 by vruiz-ru         ###   ########.fr        #
+#    Updated: 2024/03/22 18:13:01 by vruiz-ru         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -55,7 +55,8 @@ SRCS_B	=	ft_lstadd_back_bonus.c \
 			ft_lstiter_bonus.c \
 			ft_lstlast_bonus.c \
 			ft_lstnew_bonus.c \
-			ft_lstsize_bonus.c\
+			ft_lstsize_bonus.c \
+			ft_lstmap_bonus.c \
 
 OBJS	= $(SRCS:.c=.o)
 OBJS_B	= $(SRCS_B:.c=.o)

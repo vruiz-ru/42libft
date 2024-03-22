@@ -6,7 +6,7 @@
 /*   By: vruiz-ru <vruiz-ru@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/28 18:13:55 by vruiz-ru          #+#    #+#             */
-/*   Updated: 2024/03/19 14:26:29 by vruiz-ru         ###   ########.fr       */
+/*   Updated: 2024/03/22 14:51:17 by vruiz-ru         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -107,8 +107,8 @@ char	*ft_strtrim(char const *s1, char const *set);
 
 char	*ft_substr(char const *s, unsigned int start, size_t len);
 
-char	ft_tolower(int c);
+int		ft_tolower(int c);
 
-char	ft_toupper(int c);
+int		ft_toupper(int c);
 
 #endif

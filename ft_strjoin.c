@@ -6,13 +6,10 @@
 /*   By: vruiz-ru <vruiz-ru@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/03 19:07:23 by vruiz-ru          #+#    #+#             */
-/*   Updated: 2024/03/04 15:42:45 by vruiz-ru         ###   ########.fr       */
+/*   Updated: 2024/03/22 18:54:29 by vruiz-ru         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
 #include "libft.h"
 
 char	*ft_strjoin(char const *s1, char const *s2)
@@ -22,6 +19,8 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	int		i;
 
 	i = 0;
+	if (!s1 || !s2)
+		return (NULL);
 	len_dst = ft_strlen(s1) + ft_strlen(s2) + 1;
 	dst = (char *)malloc(len_dst);
 	if (dst == 0)
@@ -42,13 +41,17 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	return (dst);
 }
 /*
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
 int main()
 {
 	char const *s1;
 	char const *s2;
 	char *result;
 	
-	s1 = "Hola,";
+	s1 = NULL;
 	s2 = " mundo!";
 	result = ft_strjoin(s1, s2);
 	printf("Prueba: %s\n", result);

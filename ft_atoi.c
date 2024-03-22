@@ -6,13 +6,13 @@
 /*   By: vruiz-ru <vruiz-ru@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/13 20:52:21 by vruiz-ru          #+#    #+#             */
-/*   Updated: 2024/03/22 20:11:08 by vruiz-ru         ###   ########.fr       */
+/*   Updated: 2024/02/28 18:27:20 by vruiz-ru         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_atoi(const char *str)
+int	ft_atoi(const char *str)
 {
 	int	num;
 	int	isneg;

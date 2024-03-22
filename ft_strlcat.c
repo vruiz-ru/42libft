@@ -6,7 +6,7 @@
 /*   By: vruiz-ru <vruiz-ru@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/19 13:03:42 by vruiz-ru          #+#    #+#             */
-/*   Updated: 2024/03/19 17:18:46 by vruiz-ru         ###   ########.fr       */
+/*   Updated: 2024/03/22 19:19:54 by vruiz-ru         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,18 +19,18 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 	size_t	i;
 
 	src_len = ft_strlen(src);
-	dst_len = ft_strlen(dst);
-	i = 0;
 	if (dstsize == 0)
 		return (src_len);
+	dst_len = ft_strlen(dst);
+	if (dstsize < dst_len)
+		return (dstsize + src_len);
+	i = 0;
 	while (dst_len + i < dstsize - 1 && src[i] != 0)
 	{
 		dst[dst_len + i] = src[i];
 		i++;
 	}
 	dst[dst_len + i] = 0;
-	if (dstsize < dst_len)
-		return (dstsize + src_len);
 	return (src_len + dst_len);
 }
 /*

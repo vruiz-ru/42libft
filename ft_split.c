@@ -6,7 +6,7 @@
 /*   By: vruiz-ru <vruiz-ru@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/10 14:10:10 by vruiz-ru          #+#    #+#             */
-/*   Updated: 2024/03/21 18:06:19 by vruiz-ru         ###   ########.fr       */
+/*   Updated: 2024/03/22 19:50:32 by vruiz-ru         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,6 +75,8 @@ char	**ft_split(char const *s, char c)
 	char	**matriz;
 	size_t	len;
 
+	if (!s)
+		return (0);
 	len = ft_strlen(s);
 	matriz = malloc((ft_strworlds(s, c) + 1) * sizeof(char *));
 	if (matriz)

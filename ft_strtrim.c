@@ -6,7 +6,7 @@
 /*   By: vruiz-ru <vruiz-ru@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/06 21:34:32 by vruiz-ru          #+#    #+#             */
-/*   Updated: 2024/03/20 20:16:13 by vruiz-ru         ###   ########.fr       */
+/*   Updated: 2024/03/22 19:51:56 by vruiz-ru         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,6 +58,8 @@ char	*ft_strtrim(char const *s1, char const *set)
 	int		cont;
 	char	*str_trim;
 
+	if (!s1 || !set)
+		return (NULL);
 	cont = 0;
 	i = ft_comp_i(s1, set);
 	f = ft_comp_f(s1, set);

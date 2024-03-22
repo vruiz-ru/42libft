@@ -6,7 +6,7 @@
 /*   By: vruiz-ru <vruiz-ru@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/04 17:02:50 by vruiz-ru          #+#    #+#             */
-/*   Updated: 2024/03/19 17:20:00 by vruiz-ru         ###   ########.fr       */
+/*   Updated: 2024/03/22 19:51:04 by vruiz-ru         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	char	*dst;
 	int		i;
 
+	if (!s || !f)
+		return (NULL);
 	i = 0;
 	dst = (char *)malloc(ft_strlen(s) + 1);
 	if (dst == NULL)
