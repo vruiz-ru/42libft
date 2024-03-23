@@ -6,7 +6,7 @@
 /*   By: vruiz-ru <vruiz-ru@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/19 13:03:42 by vruiz-ru          #+#    #+#             */
-/*   Updated: 2024/03/22 19:19:54 by vruiz-ru         ###   ########.fr       */
+/*   Updated: 2024/03/23 16:22:07 by vruiz-ru         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,14 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 	return (src_len + dst_len);
 }
 /*
+Esta función concatena la cadena 'src' a la cadena 'dst' de manera segura, 
+asegurándose de que 'dst' no se desborde y siempre esté terminada por '\0'.
+
+'ft_strlcat' concatena de manera segura una cadena a otra, 
+asegurándose de que la cadena de destino no se desborde y siempre esté 
+terminada por '\0', y devuelve la longitud total de la cadena que se habría 
+creado si la cadena de destino hubiera sido lo suficientemente grande.
+ *
 #include <string.h>
 
 int main() 

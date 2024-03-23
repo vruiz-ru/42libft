@@ -6,7 +6,7 @@
 /*   By: vruiz-ru <vruiz-ru@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/04 17:02:50 by vruiz-ru          #+#    #+#             */
-/*   Updated: 2024/03/22 19:51:04 by vruiz-ru         ###   ########.fr       */
+/*   Updated: 2024/03/23 16:10:07 by vruiz-ru         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,8 +32,12 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	return (dst);
 }
 /*
+La función 'ft_strmapi' aplica una función a cada carácter de una cadena de 
+caracteres para crear una nueva cadena.
+ *
 #include <stdlib.h>
 #include <stdio.h>
+
 char mod(unsigned int index, char c)
 {
 	return (c + index);

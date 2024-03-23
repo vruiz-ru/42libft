@@ -6,7 +6,7 @@
 /*   By: vruiz-ru <vruiz-ru@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/11 18:58:31 by vruiz-ru          #+#    #+#             */
-/*   Updated: 2024/03/20 19:26:39 by vruiz-ru         ###   ########.fr       */
+/*   Updated: 2024/03/23 15:48:27 by vruiz-ru         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,13 +23,25 @@ char	*ft_strrchr(const char *s, int c)
 			last = (char *)s;
 		s++;
 	}
-	if ((char)c == 0)
+	if ((char)c == '\0')
 		return ((char *)s);
 	return (last);
 }
 /*
+ * Esta función busca la última aparición de un carácter en una cadena.
+ *
 #include <string.h>
 #include <stdio.h>
+
+int main()
+{
+	char str[11] = "Hola mundo";
+	char caracter = 'j';
+	char *resultado = strrchr(str, caracter);
+	printf("posicion : %ld\n", resultado - str);
+	resultado = ft_strrchr(str, caracter);
+	printf("posicion : %ld\n", resultado - str);
+}
 
 int main (int argc, char *argv[])
 {

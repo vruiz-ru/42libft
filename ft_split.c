@@ -6,7 +6,7 @@
 /*   By: vruiz-ru <vruiz-ru@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/10 14:10:10 by vruiz-ru          #+#    #+#             */
-/*   Updated: 2024/03/22 19:50:32 by vruiz-ru         ###   ########.fr       */
+/*   Updated: 2024/03/23 17:17:54 by vruiz-ru         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,20 +24,20 @@ static void	liberate(char **matriz, int nstr)
 static char	**ft_split2(char const *s, char c, char	**matriz, size_t len)
 {
 	size_t	cont;
-	size_t	checkpoit;
+	size_t	checkpoint;
 	int		nstr;
 
 	cont = 0;
 	nstr = 0;
-	checkpoit = 0;
+	checkpoint = 0;
 	while (cont < len)
 	{
 		if (s[cont] != c)
 		{
-			checkpoit = cont;
+			checkpoint = cont;
 			while (s[cont] != c && s[cont] != 0)
 				cont++;
-			matriz[nstr] = ft_substr(s, checkpoit, cont - checkpoit);
+			matriz[nstr] = ft_substr(s, checkpoint, cont - checkpoint);
 			if (matriz[nstr++] == 0)
 			{
 				liberate(matriz, nstr - 1);
@@ -50,7 +50,7 @@ static char	**ft_split2(char const *s, char c, char	**matriz, size_t len)
 	return (matriz);
 }
 
-static int	ft_strworlds(char const *s, char c)
+static int	ft_strwords(char const *s, char c)
 {
 	int	cont;
 	int	palabras;
@@ -78,7 +78,7 @@ char	**ft_split(char const *s, char c)
 	if (!s)
 		return (0);
 	len = ft_strlen(s);
-	matriz = malloc((ft_strworlds(s, c) + 1) * sizeof(char *));
+	matriz = malloc((ft_strwords(s, c) + 1) * sizeof(char *));
 	if (matriz)
 	{
 		return (ft_split2(s, c, matriz, len));
@@ -86,6 +86,30 @@ char	**ft_split(char const *s, char c)
 	return (0);
 }
 /*
+*
+La función divide una cadena de caracteres en varias palabras, donde las 
+palabras están separadas por un carácter específico. La función devuelve un 
+array de cadenas de caracteres, donde cada cadena es una palabra.
+
+La función toma dos argumentos: una cadena de caracteres 's' y un carácter 'c'. 
+El objetivo es dividir 's' en palabras que están separadas por el carácter 'c'.
+ *
+La función 'ft_strworlds' cuenta el número de palabras en una cadena de 
+caracteres, donde las palabras están separadas por un carácter específico.
+ *
+La función 'liberate' se utiliza para liberar la memoria asignada a un array 
+de cadenas de caracteres.
+ *
+La función 'ft_split2' divide una cadena de caracteres en varias palabras, 
+donde las palabras están separadas por un carácter específico. La función 
+llena un array de cadenas de caracteres, donde cada cadena es una palabra.
+
+'cont' se usará como contador en un bucle, 'nstr' almacenará el número 
+de palabras y 'checkpoit' se usará para marcar el inicio de una palabra.
+ *
+ *
+#include <stdio.h>
+
 int main()
 {
     char **result;

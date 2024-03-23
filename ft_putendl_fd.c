@@ -6,13 +6,10 @@
 /*   By: vruiz-ru <vruiz-ru@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/05 14:44:37 by vruiz-ru          #+#    #+#             */
-/*   Updated: 2024/03/22 19:45:40 by vruiz-ru         ###   ########.fr       */
+/*   Updated: 2024/03/23 15:13:45 by vruiz-ru         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <fcntl.h>
-#include <unistd.h>
-#include <stdio.h>
 #include "libft.h"
 
 void	ft_putendl_fd(char *s, int fd)
@@ -28,6 +25,10 @@ void	ft_putendl_fd(char *s, int fd)
 	}
 }
 /*
+#include <fcntl.h>
+#include <unistd.h>
+#include <stdio.h>
+
 int main (void)
 {
 	char	*s;

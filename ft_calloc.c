@@ -6,12 +6,10 @@
 /*   By: vruiz-ru <vruiz-ru@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/02 17:10:47 by vruiz-ru          #+#    #+#             */
-/*   Updated: 2024/03/04 15:11:57 by vruiz-ru         ###   ########.fr       */
+/*   Updated: 2024/03/23 14:18:02 by vruiz-ru         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-#include <stdio.h>
 #include "libft.h"
 
 void	*ft_calloc(size_t count, size_t size)
@@ -31,6 +29,10 @@ void	*ft_calloc(size_t count, size_t size)
 	return (arr);
 }
 /*
+ 
+#include <stdlib.h>
+#include <stdio.h>
+
 int main() {
     // Tamaño del arreglo
     size_t num_elements = 3;

@@ -6,12 +6,10 @@
 /*   By: vruiz-ru <vruiz-ru@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/15 15:09:23 by vruiz-ru          #+#    #+#             */
-/*   Updated: 2024/03/15 16:19:46 by vruiz-ru         ###   ########.fr       */
+/*   Updated: 2024/03/23 17:22:05 by vruiz-ru         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <unistd.h>
 #include "libft.h"
 
 void	ft_lstdelone(t_list *lst, void (*del)(void *))
@@ -23,6 +21,9 @@ void	ft_lstdelone(t_list *lst, void (*del)(void *))
 	}
 }
 /*
+#include <stdio.h>
+#include <unistd.h>
+
 void del	(void *lst)
 {
 	free(lst);

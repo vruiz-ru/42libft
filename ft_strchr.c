@@ -6,7 +6,7 @@
 /*   By: vruiz-ru <vruiz-ru@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/10 17:58:44 by vruiz-ru          #+#    #+#             */
-/*   Updated: 2024/03/20 17:55:39 by vruiz-ru         ###   ########.fr       */
+/*   Updated: 2024/03/23 16:33:28 by vruiz-ru         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,8 +25,22 @@ char	*ft_strchr(const char *s, int c)
 	return (NULL);
 }
 /*
+Esta función busca la primera aparición de un carácter 
+específico en una cadena de caracteres.
+ *
 #include <string.h>
 #include <stdio.h>
+
+int main()
+{
+	char str[11] = "Hola mundo";
+	char caracter = 'o';
+	char *resultado = strchr(str, caracter);
+	printf("posicion : %ld\n", resultado - str);
+	resultado = ft_strchr(str, caracter);
+	printf("posicion : %ld\n", resultado - str);
+}
+
 int main (int argc, char *argv[])
 {
 	(void)argc;

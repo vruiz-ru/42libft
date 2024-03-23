@@ -6,7 +6,7 @@
 /*   By: vruiz-ru <vruiz-ru@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/19 12:40:37 by vruiz-ru          #+#    #+#             */
-/*   Updated: 2024/03/19 13:02:57 by vruiz-ru         ###   ########.fr       */
+/*   Updated: 2024/03/23 15:04:12 by vruiz-ru         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,9 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 	return (dst);
 }
 /*
+ * Esta función copia los primeros 'n' bytes de la zona de memoria apuntada por 
+ * 'src' a la zona de memoria apuntada por 'dst', y devuelve un puntero a 'dst'
+ *
 #include <string.h>
 
 int main () {

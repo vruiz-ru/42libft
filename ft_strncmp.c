@@ -6,7 +6,7 @@
 /*   By: vruiz-ru <vruiz-ru@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/17 11:10:59 by vruiz-ru          #+#    #+#             */
-/*   Updated: 2024/03/19 17:20:45 by vruiz-ru         ###   ########.fr       */
+/*   Updated: 2024/03/23 16:08:07 by vruiz-ru         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,10 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 	return (0);
 }
 /*
+Esta función compara hasta los primeros 'n' caracteres de dos cadenas de 
+caracteres.
+ *
+ *
 #include <stdio.h>
 #include <string.h>
 

@@ -6,7 +6,7 @@
 /*   By: vruiz-ru <vruiz-ru@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/05 19:24:56 by vruiz-ru          #+#    #+#             */
-/*   Updated: 2024/03/21 18:09:52 by vruiz-ru         ###   ########.fr       */
+/*   Updated: 2024/03/23 15:26:33 by vruiz-ru         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,9 @@ void	ft_putnbr_fd(int n, int fd)
 		}
 	}
 }
-/*
+/* 
+ * Falla por reservar memoria 
+ *
 void	ft_putnbr_fd(int n, int fd)
 {
 	char	*str;

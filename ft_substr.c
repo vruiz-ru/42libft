@@ -6,7 +6,7 @@
 /*   By: vruiz-ru <vruiz-ru@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/02 19:13:16 by vruiz-ru          #+#    #+#             */
-/*   Updated: 2024/03/22 19:52:27 by vruiz-ru         ###   ########.fr       */
+/*   Updated: 2024/03/23 15:51:07 by vruiz-ru         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,6 +38,11 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	return (str);
 }
 /*
+ * La función 'ft_substr' toma tres argumentos: una cadena de caracteres 's', un 
+ * entero sin signo 'start' que representa el índice de inicio desde donde se 
+ * debe extraer la subcadena, y un tamaño 'len' que representa la longitud de la 
+ * subcadena a extraer.
+ *
 int main()
 {
     char const *s;

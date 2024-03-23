@@ -6,12 +6,10 @@
 /*   By: vruiz-ru <vruiz-ru@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/11 20:22:51 by vruiz-ru          #+#    #+#             */
-/*   Updated: 2024/03/01 03:30:47 by vruiz-ru         ###   ########.fr       */
+/*   Updated: 2024/03/23 14:22:18 by vruiz-ru         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <ctype.h>
 #include "libft.h"
 
 int	ft_isalnum(int c)
@@ -23,6 +21,18 @@ int	ft_isalnum(int c)
 		return (0);
 }
 /*
+#include <stdio.h>
+#include <ctype.h>
+#include <unistd.h>
+
+int main()
+{
+	char a = 48 + ft_isalnum('.');
+	write(1, &a, 1);
+	a = 48 + isalnum('.');
+	write(1, &a, 1);
+}
+
 int	main(int argc, char **argv)
 {
 	(void)argc;

@@ -6,7 +6,7 @@
 /*   By: vruiz-ru <vruiz-ru@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/05 15:30:31 by vruiz-ru          #+#    #+#             */
-/*   Updated: 2024/03/19 17:15:33 by vruiz-ru         ###   ########.fr       */
+/*   Updated: 2024/03/23 16:27:41 by vruiz-ru         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,7 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 /*
 #include <stdio.h>
 #include <string.h>
+
 void mod (unsigned int i, char *c)
 {
 	*c = 'a' + i;

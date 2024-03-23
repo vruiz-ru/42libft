@@ -6,7 +6,7 @@
 /*   By: vruiz-ru <vruiz-ru@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/03 19:07:23 by vruiz-ru          #+#    #+#             */
-/*   Updated: 2024/03/22 18:54:29 by vruiz-ru         ###   ########.fr       */
+/*   Updated: 2024/03/23 16:26:16 by vruiz-ru         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,6 +41,10 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	return (dst);
 }
 /*
+La función 'ft_strjoin' se utiliza para concatenar dos 
+cadenas reservando el espacio que requieran.
+ *
+ *
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>

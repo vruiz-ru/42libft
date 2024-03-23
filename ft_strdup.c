@@ -6,12 +6,10 @@
 /*   By: vruiz-ru <vruiz-ru@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/02 17:59:28 by vruiz-ru          #+#    #+#             */
-/*   Updated: 2024/03/04 16:54:16 by vruiz-ru         ###   ########.fr       */
+/*   Updated: 2024/03/23 16:30:16 by vruiz-ru         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <string.h>
-#include <stdio.h>
-#include <stdlib.h>
+
 #include "libft.h"
 
 char	*ft_strdup(const char *s1)
@@ -25,6 +23,14 @@ char	*ft_strdup(const char *s1)
 	return (dst);
 }
 /*
+Esta función se utiliza para crear una copia duplicada de una cadena de 
+caracteres existente.
+ *
+ *
+#include <string.h>
+#include <stdio.h>
+#include <stdlib.h>
+ 
 int main()
 {
 	char *original = "Hola, mundo!";

@@ -6,13 +6,10 @@
 /*   By: vruiz-ru <vruiz-ru@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/16 18:13:42 by vruiz-ru          #+#    #+#             */
-/*   Updated: 2024/03/01 03:42:24 by vruiz-ru         ###   ########.fr       */
+/*   Updated: 2024/03/23 15:01:02 by vruiz-ru         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
-#include <stdlib.h>
-#include <stdio.h>
 #include "libft.h"
 
 int	ft_memcmp(const void *s1, const void *s2, size_t n)
@@ -30,22 +27,21 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	return (0);
 }
 /*
-int	main(int argc, char **argv)
-{
-	char	*s = argv[1];
-	char	*s1 = argv[2];
-	int		n = atoi(argv[3]);
+ *Esta función compara los primeros 'n' bytes de dos zonas de memoria.
+ *
+#include <string.h>
+#include <stdlib.h>
+#include <stdio.h>
+ 
+int main() {
+    char s1[] = "Hola Mundo";
+    char s2[] = "Hola mundo";
 
-	(void)argc;
-	if (!ft_memcmp(s, s1, n))
-		printf("The string are equal up to %d letters\n\n\n", n);
-	else 
-		printf("The strings are different\n\n\n");
+    int resultado = memcmp(s1, s2, sizeof(s1));
+    printf("memcmp: %d\n", resultado);
 
-	if (!memcmp(s, s1, n))
-		printf("The string are equal up to %d letters\n", n);
-	else 
-		printf("The strings are different\n");
+	resultado = ft_memcmp(s1, s2, sizeof(s1));
+	printf("ft_memcmp: %d\n", resultado);
 
-	
+    return 0;
 }*/

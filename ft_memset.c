@@ -6,7 +6,7 @@
 /*   By: vruiz-ru <vruiz-ru@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/16 17:42:39 by vruiz-ru          #+#    #+#             */
-/*   Updated: 2024/03/21 18:08:15 by vruiz-ru         ###   ########.fr       */
+/*   Updated: 2024/03/23 15:50:32 by vruiz-ru         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,24 +26,24 @@ void	*ft_memset(void *b, int c, size_t len)
 	return (b);
 }
 /*
+ * Esta función llena los primeros 'len' bytes de la 
+ * zona de memoria apuntada por 
+ * 'b' con el byte 'c'.
+ *
+ *
 #include <string.h>
 #include <stdio.h>
 
-int	main(void)
+int main()
 {
-	char	v[10]; 
-
-	ft_memset(v, 42, 5);
-
-	for (int i = 0; i < 10; ++i)	
-		printf("%d\n", v[i]);
-	printf("ft_memset-> %p\n\n", ft_memset(v, 42, 5));
-	
-
-
-	memset(v, 21, 5);
-
-	for (int i = 0; i < 10; ++i)
-		printf("%d\n", v[i]);
-	printf("Real memset-> %p\n", memset(v, 21, 5));
+    char str[11] = "Hola mundo";
+    
+	printf("%s\n", str);
+    memset(str, '$', 6);
+    printf("%s\n", str);
+	strcpy(str, "Hola mundo");
+	printf("%s\n", str);
+	ft_memset(str, '#', 7);
+	printf("%s\n", str);
+    return 0;
 }*/

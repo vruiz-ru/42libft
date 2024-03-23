@@ -6,7 +6,7 @@
 /*   By: vruiz-ru <vruiz-ru@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/13 20:52:21 by vruiz-ru          #+#    #+#             */
-/*   Updated: 2024/02/28 18:27:20 by vruiz-ru         ###   ########.fr       */
+/*   Updated: 2024/03/23 13:58:07 by vruiz-ru         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,43 +39,15 @@ int	ft_atoi(const char *str)
 	}
 	return (num * isneg);
 }
-
 /*
-static int	ft_isspace(char c)
-{
-	if ((c >= 9 && c <= 13) || 32 == c)
-		return (1);
-	return (0);
-}
-
-int	ft_atoi(const char *str)
-{
-	int		sign;
-	int		nb;
-
-	nb = 0;
-	sign = 1;
-	if (NULL == str)
-		return (0);
-	while (ft_isspace(*str))
-		++str;
-	if (*str == '+' || *str == '-')
-		if ((*str++) == '-')
-			sign = -1;
-	while (*str >= 48 && *str <= 57)
-		nb = (10 * nb) + ((*str++) - 48);
-	return (nb * sign);
-}
-*/
-/*
-int	main(void)
+yint	main(void)
 {
 	char	*s;
 	char	*s1;
 
-	s1 = "    ++  2413";
-	s = "     ++  2413";
-	printf("%d\n", ft_atoi(s));
-	printf("%d\n", atoi(s));
+	s1 = "    +2413";
+	s = "     +2413";
+	printf("replica: %d\n", ft_atoi(s));
+	printf("original: %d\n", atoi(s));
 }
 */

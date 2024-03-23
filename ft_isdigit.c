@@ -6,12 +6,10 @@
 /*   By: vruiz-ru <vruiz-ru@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/10 15:02:51 by vruiz-ru          #+#    #+#             */
-/*   Updated: 2024/03/01 03:32:42 by vruiz-ru         ###   ########.fr       */
+/*   Updated: 2024/03/23 14:32:18 by vruiz-ru         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <ctype.h>
-#include <stdio.h>
 #include "libft.h"
 
 int	ft_isdigit(int c)
@@ -22,14 +20,15 @@ int	ft_isdigit(int c)
 		return (0);
 }
 
-/*int	main(void)
-{
-	for (int i = 0; i < 127; ++i)
-	{
-		if (ft_isdigit(i))
-			printf("My function-> %c is a digit\n", i);
-		if (isdigit(i))
-			printf("Real function-> %c is a digit\n\n\n", i);
-	}
+/*
+#include <unistd.h>
+#include <ctype.h>
 
-}*/
+int main()
+{
+	char a = 48 + ft_isdigit('a');
+	write(1, &a, 1);
+	a = 48 + isdigit('a');
+	write(1, &a, 1);
+}
+*/

@@ -6,7 +6,7 @@
 /*   By: vruiz-ru <vruiz-ru@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/18 20:08:54 by vruiz-ru          #+#    #+#             */
-/*   Updated: 2024/03/19 16:27:07 by vruiz-ru         ###   ########.fr       */
+/*   Updated: 2024/03/23 16:04:01 by vruiz-ru         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,11 +36,17 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 	return (0);
 }
 /*
+ *
+Esta función busca la primera aparición de la cadena 'needle' en la cadena 
+'haystack', pero no busca más allá de los primeros 'len' caracteres de 
+'haystack'.
+ *
 #include <string.h>
 
 int main() {
     const char *cadena1 = "Hola, ¿cómo estás?";
     const char *cadena2 = "¿cómo";
+	char * resultado;
 
 	char *resultado = strnstr(cadena1, cadena2, strlen(cadena1));
 	printf("Con strnstr %s\n", resultado);

@@ -6,13 +6,13 @@
 /*   By: vruiz-ru <vruiz-ru@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/06 21:34:32 by vruiz-ru          #+#    #+#             */
-/*   Updated: 2024/03/22 19:51:56 by vruiz-ru         ###   ########.fr       */
+/*   Updated: 2024/03/23 19:54:44 by vruiz-ru         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_comp_i(char const *s1, char const *set)
+static int	ft_comp_i(char const *s1, char const *set)
 {
 	int	i;
 	int	s;
@@ -31,7 +31,7 @@ int	ft_comp_i(char const *s1, char const *set)
 	return (i);
 }
 
-int	ft_comp_f(char const *s1, char const *set)
+static int	ft_comp_f(char const *s1, char const *set)
 {
 	int	f;
 	int	s;

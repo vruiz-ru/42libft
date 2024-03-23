@@ -6,7 +6,7 @@
 /*   By: vruiz-ru <vruiz-ru@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/16 18:45:30 by vruiz-ru          #+#    #+#             */
-/*   Updated: 2024/03/19 19:13:37 by vruiz-ru         ###   ########.fr       */
+/*   Updated: 2024/03/23 15:50:02 by vruiz-ru         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,13 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 	}
 	return (dst);
 }
-/* 
+/*
+ * Esta función copia los primeros 'len' bytes de la zona de memoria apuntada 
+ * por 'src' a la zona de memoria apuntada por 'dst'. A diferencia de 'memcpy', 
+ * 'memmove' maneja correctamente los casos en los que las zonas de memoria se 
+ *  superponen.
+ *
+ *
 #include <string.h>
 #include <stdio.h>
 

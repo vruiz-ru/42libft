@@ -6,12 +6,10 @@
 /*   By: vruiz-ru <vruiz-ru@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/14 19:08:01 by vruiz-ru          #+#    #+#             */
-/*   Updated: 2024/03/19 16:55:50 by vruiz-ru         ###   ########.fr       */
+/*   Updated: 2024/03/23 17:24:50 by vruiz-ru         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <unistd.h>
 #include "libft.h"
 
 int	ft_lstsize(t_list *lst)
@@ -27,6 +25,9 @@ int	ft_lstsize(t_list *lst)
 	return (i);
 }
 /*
+#include <stdio.h>
+#include <unistd.h>
+
 int main()
 {
   

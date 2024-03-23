@@ -6,12 +6,10 @@
 /*   By: vruiz-ru <vruiz-ru@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/17 01:02:25 by vruiz-ru          #+#    #+#             */
-/*   Updated: 2024/03/04 15:10:00 by vruiz-ru         ###   ########.fr       */
+/*   Updated: 2024/03/23 14:07:32 by vruiz-ru         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <strings.h>
-#include <stdio.h>
 #include "libft.h"
 
 void	ft_bzero(void *s, size_t n)
@@ -24,19 +22,21 @@ void	ft_bzero(void *s, size_t n)
 	}
 }
 
-/*int	main(void)
-{
-	int	v[20];
+/*
+#include <strings.h>
+#include <stdio.h>
 
-	for (int i = 0; i < 20; ++i)
-		v[i] = 42;
+int main() {
+    char str[50] = "Hola Mundo!";
+	char str2[50] = "Hola mundo!";
+    printf("Antes de bzero: %s\n", str);
 
-	for (int i = 0; i < 20; ++i)
-		printf("%d\n", v[i]);
-	puts("");
+    bzero(str, sizeof(str));
+    printf("Después de bzero: %s\n", str);
 
-	ft_bzero(v, 9);
-	
-	for (int i = 0; i < 20; ++i)
-		printf("%d\n", v[i]);
-}*/	
+	printf("Antes de ft_bzero: %s\n", str2);
+	ft_bzero(str2, sizeof(str2));
+	printf("Despues de ft_bzero: %s\n", str2);
+
+    return 0;
+}*/
